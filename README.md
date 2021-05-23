@@ -1,4 +1,4 @@
-# RBoxScatter: Generar Customs Visual Poer BI en lenguaje R 
+# RBoxScatter: Generar Customs Visual Power BI en lenguaje R 
 
 TYPES OF DISPLAY 
 
