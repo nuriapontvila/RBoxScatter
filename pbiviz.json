@@ -1,0 +1,22 @@
+{"visual":
+    {"name":"rBoxScatter",
+        "displayName":"R_Box_Scatter",
+        "guid":"rBoxScatter0E79A72CF15D432082926D847A65F8D7",
+        "visualClassName":"Visual",
+        "version":"1.0.0",
+        "description":"R_Box_Sacatter",
+        "supportUrl":"http://community.powerbi.com/",
+        "gitHubUrl":""
+    },
+        "apiVersion":"2.6.0",
+        "author":{"name":"Nuria Pont Vila","email":"nuriapontvila@uoc.edu"},
+        "assets":{"icon":"assets/icon.png"},
+        "externalJS":null,
+        "style":"style/visual.less",
+        "capabilities":"capabilities.json",
+        "dependencies":"dependencies.json",
+        "stringResources":[]
+}
+        
+            
+
