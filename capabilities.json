@@ -1,0 +1,568 @@
+
+{
+  "dataRoles": [
+    {
+      "displayName": "eje_x",
+      "description": "eje_x",
+      "kind": "GroupingOrMeasure",
+      "name": "eje_x"
+    },
+    {
+      "displayName": "eje_y",
+      "description": "eje_y",
+      "kind": "GroupingOrMeasure",
+      "name": "eje_y"
+    },
+    {
+      "displayName": "eje_z",
+      "description": "eje_z",
+      "kind": "GroupingOrMeasure",
+      "name": "eje_z"
+    },
+    {
+      "displayName": "indice",
+      "description": "indice",
+      "kind": "GroupingOrMeasure",
+      "name": "indice"
+    }
+  ],
+  "dataViewMappings": [
+    {
+       "conditions": [
+        {
+          "eje_x": {
+            "max": 1
+          },
+          "eje_y": {
+            "max": 1
+          },
+          "eje_z": {
+            "max": 1
+          },
+          "indice": {
+            "max": 1
+          }
+        }
+      ],
+      "scriptResult": {
+        "dataInput": {
+          "table": {
+            "rows": {
+              "select": [
+                {
+                  "for": {
+                    "in": "eje_x"
+                  }
+                },
+                {
+                  "for": {
+                    "in": "eje_y"
+                  }
+                },
+                {
+                  "for": {
+                    "in": "eje_z"
+                  }
+                },
+                {
+                  "for": {
+                    "in": "indice"
+                  }
+                }
+              ],
+              "dataReductionAlgorithm": {
+                "top": { }
+              }
+            }
+          }
+        },
+        "script": {
+          "scriptProviderDefault": "R",
+          "scriptOutputType": "html",
+          "source": {
+            "objectName": "rcv_script",
+            "propertyName": "source"
+          },
+          "provider": {
+            "objectName": "rcv_script",
+            "propertyName": "provider"
+          }
+        }
+      }
+    }
+  ],
+  "objects": {
+     "graphic_type": {
+      "properties": {
+        "graphic_type":{
+          "displayName": "graphic_type",
+          "description": "graphic_type",
+          "type": {
+              "enumeration": [
+                {
+                  "displayName": "violin", "value": "violin"
+                },
+                {
+                  "displayName": "boxplot",  "value": "boxplot"
+                },
+                {
+                  "displayName": "violin&boxplot",  "value": "both"
+                },
+                {
+                  "displayName": "scatter_point", "value": "scatter_point"
+                },
+                {
+                  "displayName": "scatter_line", "value": "scatter_line"
+                },
+                {
+                  "displayName": "Histogram", "value": "Histogram"
+                },
+                {
+                  "displayName": "Bar", "value": "Bar"
+                },
+                {
+                  "displayName": "Bar_2vars(Separadas)", "value": "Bar_2vars(Separadas)"
+                },
+                {
+                  "displayName": "Bar_2vars","value": "Bar_2vars"
+                },
+                {
+                  "displayName": "scatter3d mesh3d", "value": "scatter3d mesh3d"
+                },
+                {
+                  "displayName": "scatter3d lines", "value": "scatter3d lines"
+                },
+                {
+                  "displayName": "scatter3d markers","value": "scatter3d markers"
+                }
+              ]
+            }
+        }
+      }
+    },
+    "settings_Global":{
+      "displayName": "settings_Global",
+      "properties": {
+         "show": {
+              "type": {"bool": true}
+          },            
+          "colour":{
+          "displayName": "colour points",
+          "description": "colour points",
+          "type": {
+              "enumeration": [
+                {
+                  "displayName": "red",
+                  "value": "firebrick2"
+                },
+                {
+                  "displayName": "green",
+                  "value": "chartreuse3"
+                },
+                 {
+                  "displayName": "blue",
+                  "value": "dodgerblue"
+                },
+                {
+                 "displayName": "yellow",
+                 "value": "gold"
+               }
+              ]
+            }
+        },
+        "themes":{
+          "displayName": "themes",
+          "description": "themes",
+          "type": {
+              "enumeration": [
+                {
+                  "displayName": "theme_gray", "value": "theme_gray"
+                },
+                {
+                  "displayName": "theme_linedraw","value": "theme_linedraw"
+                },
+                {
+                  "displayName": "theme_bw", "value": "theme_bw"
+                },
+                {
+                 "displayName": "theme_dark", "value": "theme_dark"
+                },
+                {
+                  "displayName": "theme_minimal", "value": "theme_minimal"
+                },
+                {
+                  "displayName": "theme_classic", "value": "theme_classic"
+                },
+                {
+                  "displayName": "theme_void","value": "theme_void"
+                },
+                {
+                  "displayName": "theme_test","value": "theme_test"
+                }
+              ]
+            }
+        },
+        "fill":{
+          "displayName": "fill",
+          "description": "fill",
+          "type": {
+            "enumeration": [
+              {
+                "displayName": "red",
+                "value": "firebrick2"
+              },
+              {
+                "displayName": "green",
+                "value": "lightgreen"
+              },
+              {
+                "displayName": "yellow",
+                "value": "lightyellow"
+              },
+              {
+                "displayName": "BuGn",
+                "value": "BuGn"
+              },
+              {
+                "displayName": "BuPu",
+                "value": "BuPu"
+              },
+              {
+                "displayName": "GnBu",
+                "value": "GnBu"
+              },
+              {
+                "displayName": "Greens",
+                "value": "Greens"
+              },
+              {
+                "displayName": "Greys",
+                "value": "Greys"
+              },
+              {
+                "displayName": "Oranges",
+                "value": "Oranges"
+              },
+              {
+                "displayName": "OrRd",
+                "value": "OrRd"
+              },
+              {
+                "displayName": "PuBu",
+                "value": "PuBu"
+              },
+              {
+                "displayName": "PuBuGn",
+                "value": "PuBuGn"
+              },
+              {
+                "displayName": "PuRd",
+                "value": "PuRd"
+              },
+              {
+                "displayName": "Purples",
+                "value": "Purples"
+              },
+              {
+                "displayName": "RdPu",
+                "value": "RdPu"
+              },
+              {
+                "displayName": "Reds",
+                "value": "Reds"
+              },
+              {
+                "displayName": "RdGy",
+                "value": "RdGy"
+              },
+              {
+                "displayName": "RdYIBu",
+                "value": "RdYIBu"
+              },
+              {
+                "displayName": "RdYIGn",
+                "value": "RdYIGn"
+              },
+              {
+                "displayName": "Spectral",
+                "value": "Spectral"
+              },
+              {
+                "displayName": "Accent",
+                "value": "Accent"
+              },
+              {
+                "displayName": "Dark2",
+                "value": "Dark2"
+              },
+              {
+               "displayName": "Paired",
+               "value": "Paired"
+              }
+            ]
+          }
+        },   
+        "Disposicion":{
+          "displayName": "Layaut H/V",
+          "description": "Layaut H/V",
+          "type": {
+              "enumeration": [
+                {
+                  "displayName": "Horizontal",
+                  "value": "Horizontal"
+                },
+                {
+                  "displayName": "Vertical",
+                  "value": "Vertical"
+                }
+              ]
+            }
+        },
+        "size":{
+          "displayName": "size",
+          "description": "size",
+          "type": {
+              "enumeration": [
+                {
+                  "displayName": "0.5",
+                  "value": "0.5"
+                },
+                {
+                  "displayName": "1",
+                  "value": "1"
+                },
+                 {
+                  "displayName": "2",
+                  "value": "2"
+                },
+                {
+                 "displayName": "4",
+                 "value": "4"
+               },
+               {
+                "displayName": "6",
+                "value": "6"
+              }
+              ]
+            }
+        }
+      }
+  },
+    "settings_Scatter": {
+      "properties": {
+        "tipo_Scatter":{
+          "displayName": "tipo_Scatter",
+          "description": "tipo_Scatter",
+          "type": {
+              "enumeration": [
+                {
+                  "displayName": "Point",
+                  "value": "Point"
+                },
+                {
+                  "displayName": "Bar",
+                  "value": "Bar"
+                },
+                {
+                  "displayName": "Line",
+                  "value": "Line"
+                },
+                {
+                  "displayName": "Histogram",
+                  "value": "Histogram"
+                }
+              ]
+            }
+        } ,
+        "shape":{
+          "displayName": "shape scatter",
+          "description": "shape scatter",
+          "type": {
+              "enumeration": [
+                {
+                  "displayName": "TRUE",
+                  "value": "TRUE"
+                },
+                {
+                  "displayName": "FALSE",
+                  "value": "FALSE"
+                }
+              ]
+            }
+        } ,
+
+        "metodo":{
+          "displayName": "method Smoothing(tendencia)",
+          "description": "method Smoothing(tendencia)",
+          "type": {
+              "enumeration": [
+                {
+                  "displayName": "lm",
+                  "value": "lm"
+                },
+                {
+                  "displayName": "glm",
+                  "value": "glm"
+                },
+                {
+                  "displayName": "gam",
+                  "value": "gam"
+                },
+                {
+                  "displayName": "rim",
+                  "value": "rim"
+                },
+                {
+                  "displayName": "loess",
+                  "value": "loess"
+                }
+              ]
+            }
+        }  
+      }
+    },
+    "settings_Box_Violin": {
+      "properties": {
+
+        "jitter":{
+          "displayName": "jitter",
+          "description": "jitter",
+          "type": {
+              "enumeration": [
+                {
+                  "displayName": "TRUE",
+                  "value": "TRUE"
+                },
+                {
+                  "displayName": "FALSE",
+                  "value": "FALSE"
+                }
+              ]
+            }
+        },                               
+        "trim":{
+          "displayName": "trim",
+          "description": "trim",
+          "type": {
+              "enumeration": [
+                {
+                  "displayName": "TRUE",
+                  "value": "TRUE"
+                },
+                {
+                  "displayName": "FALSE",
+                  "value": "FALSE"
+                }
+              ]
+            }
+        },
+        "notch":{
+          "displayName": "notch",
+          "description": "notch",
+          "type": {
+              "enumeration": [
+                {
+                  "displayName": "TRUE",
+                  "value": "TRUE"
+                },
+                {
+                  "displayName": "FALSE",
+                  "value": "FALSE"
+                }
+              ]
+            }
+        }
+         
+
+      }
+    },
+    "settings_labels_params":{
+        "displayName": "Labels",
+        "description": "Control the appearance of labels",
+        "properties": {
+          "show": {
+                "type": {"bool": true}
+            },
+            "textSize":{
+            "displayName": "Font size",
+            "type": {
+              "numeric": true
+            }
+            },
+            "tl_col": {
+              "displayName": "Color",
+              "type": { "fill": { "solid": { "color": true }}}
+            }
+        }
+    },
+        "settings_coeff_params":{
+        "displayName": "Correlation coefficients",
+         "description": "Control the appearance of correlation coefficients in the plot",
+        "properties": {
+          "show": {
+                "type": {"bool": true}
+            },
+            "addCoef_col": {
+              "displayName": "Color",
+              "type": { "fill": { "solid": { "color": true }}}
+            },
+            "number_digits": {
+              "displayName": "# digits",
+              "description": "Number of digits after decimal point",
+              "type": {
+                "enumeration": [
+                  {
+                    "displayName": "1",
+                    "value": "1"
+                  },
+                   {
+                    "displayName": "2",
+                    "value": "2"
+                  },
+                  {
+                    "displayName": "3",
+                    "value": "3"
+                  }
+                ]
+              }
+            },
+            "textSize":{
+            "displayName": "Font size",
+            "type": {
+              "numeric": true
+              }
+            }
+        }
+    },
+        "settings_additional_params":{
+        "displayName": "Additional settings",
+        "properties": {
+          "show": {
+                "type": {"bool": true}
+            },
+            "showWarnings":{
+            "displayName": "Show warnings",
+            "type": {
+              "bool": true
+            }
+          }      
+        }
+    },
+    "rcv_script": {
+      "properties": {
+        "provider": {
+          "type": { "text": true }
+        },
+        "source": {
+          "type": {
+            "scripting": { "source": true }
+          }
+        }
+      }
+    }
+
+  },
+  
+  
+  "suppressDefaultTitle": true
+}
