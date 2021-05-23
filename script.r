@@ -407,7 +407,7 @@ stop_work=FALSE
 
                 ############# Create and save widget ###############
 
-
+                p = ggplotly(p);
                 internalSaveWidget(p, 'out.html');
 
                 ####################################################
